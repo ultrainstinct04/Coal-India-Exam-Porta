@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="413dp"
+    android:layout_height="730dp"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="-3dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/educationSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Matriculation Details -->
+
+        <TextView
+            android:id="@+id/educationHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="8dp"
+            android:text="Education Details"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:max="100"
+            android:progress="50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/educationHeader" />
+
+        <TextView
+            android:id="@+id/progressText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Section 2 of 4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressBar2" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutMatriculationYear"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="144dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Year of Passing"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@drawable/mtrl_ic_error"
+            app:helperText="Required*"
+            app:helperTextEnabled="true"
+            app:helperTextTextColor="@color/red"
+            app:layout_constraintBottom_toTopOf="@id/textInputLayoutMatriculationPercentage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.229">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/matriculationYearEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/latobold"
+                android:inputType="number"
+                android:maxLength="4" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutMatriculationPercentage"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Percentage"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:helperText="Required*"
+            app:helperTextEnabled="true"
+            app:helperTextTextColor="@color/red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutMatriculationYear">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/matriculationPercentageEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/latobold"
+                android:inputType="numberDecimal"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutMatriculationSchool"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="School"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:helperText="Required*"
+            app:helperTextEnabled="true"
+            app:helperTextTextColor="@color/red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutMatriculationPercentage">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/matriculationSchoolEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/latobold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Intermediate Details -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutIntermediateSchool"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="School"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:helperText="Required*"
+            app:helperTextEnabled="true"
+            app:helperTextTextColor="@color/red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutIntermediatePercentage">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/intermediateSchoolEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/latobold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Graduation Details -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutIntermediatePercentage"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Percentage"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:helperText="Required*"
+            app:helperTextEnabled="true"
+            app:helperTextTextColor="@color/red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutIntermediateYear">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/intermediatePercentageEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/latobold"
+                android:inputType="numberDecimal"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutGraduationSchool"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="College"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:helperText="Required*"
+            app:helperTextEnabled="true"
+            app:helperTextTextColor="@color/red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutCGPA">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/graduationSchoolEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/latobold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutCGPA"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="CGPA (if applicable)"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:helperText="Required*"
+            app:helperTextEnabled="true"
+            app:helperTextTextColor="@color/red"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayoutGraduationSchool"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutGraduationYear">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cgpaEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/latobold"
+                android:inputType="numberDecimal"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="116dp"
+            android:fontFamily="@font/latoextrabold"
+            android:text="Matriculation"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayoutMatriculationYear"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayoutMatriculationYear"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/latoextrabold"
+            android:text="Intermediate"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayoutIntermediateYear"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayoutIntermediateYear"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.969" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutIntermediateYear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Year of Passing"
+            app:errorEnabled="true"
+            app:helperText="Required*"
+            app:helperTextEnabled="true"
+            app:helperTextTextColor="@color/red"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/textInputLayoutMatriculationPercentage"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutMatriculationYear"
+            app:layout_constraintVertical_bias="0.328">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/intermediateYearEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/latoextrabold"
+            android:text="Graduation"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayoutGraduationYear"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayoutGraduationYear"
+            app:layout_constraintTop_toBottomOf="@+id/textView12"
+            app:layout_constraintVertical_bias="0.967" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutGraduationYear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="478dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Year of Passing"
+            app:errorEnabled="true"
+            app:helperText="Required*"
+            app:helperTextEnabled="true"
+            app:helperTextTextColor="@color/red"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayoutCGPA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutMatriculationSchool">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/GraduationYearEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/latobold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nextbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutGraduationSchool" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

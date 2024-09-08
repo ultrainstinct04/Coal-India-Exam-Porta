@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "442504680691",
+    "project_id": "bccl-bbb0e",
+    "storage_bucket": "bccl-bbb0e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:442504680691:android:afc30f509f9e6ae0289386",
+        "android_client_info": {
+          "package_name": "com.example.bccl"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRl91BBuVg4ISIhKzeHSRWc3Jyek3mdPU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
